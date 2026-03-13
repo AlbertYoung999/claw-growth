@@ -1,0 +1,49 @@
+# 虾的养成计划 - 配置文件示例
+# 复制此文件为 config.yaml 并进行自定义配置
+
+skill:
+  name: "虾的养成计划"
+  version: "1.0.0"
+  data_dir: "memory/shrimp_growth/"
+  
+# 自定义阶段配置（可选）
+stages:
+  stage1:
+    name: "孵化期"
+    emoji: "🥚"
+    duration_days: 3
+    
+  stage2:
+    name: "工兵期" 
+    emoji: "🦐"
+    duration_days: 7
+    
+  stage3:
+    name: "建筑师期"
+    emoji: "🏗️"
+    duration_days: 14
+
+# 经验值配置
+exp:
+  base_task_exp: 20
+  base_stage_exp: 100
+  streak_bonus_per_day: 0.1  # 每天10%加成
+  max_streak_bonus: 0.5       # 最高50%加成
+  
+# 成就配置
+achievements:
+  enabled: true
+  secret_achievements: true
+  
+# 提示词配置
+templates:
+  language: "zh_CN"  # 语言设置
+  show_hints: true   # 是否显示提示
+  show_examples: true  # 是否显示示例
+  
+# 通知配置
+notifications:
+  daily_reminder: true      # 每日提醒
+  streak_reminder: true     # 连续学习提醒
+  achievement_notify: true  # 成就解锁通知
+  level_up_notify: true     # 升级通知
